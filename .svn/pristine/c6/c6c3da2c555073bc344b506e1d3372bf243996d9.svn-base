@@ -1,0 +1,21 @@
+
+var project_ctr = myApp.controller('project_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading', function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage, $ionicLoading) {
+
+	//获取本地缓存数据
+	$rootScope.userInfo = ioniclocalStorage.getObject("userInfo");
+	
+
+
+
+
+
+
+
+
+	//下拉刷新
+	$scope.doRefresh = function() {
+			$scope.$broadcast('scroll.refreshComplete');
+	};
+	
+	
+}])

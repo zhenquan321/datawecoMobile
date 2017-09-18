@@ -1,0 +1,117 @@
+<html ng-app="ionicApp">
+	<head>
+		<script type="text/javascript">
+		    function browserRedirect() {
+		      var sUserAgent = navigator.userAgent.toLowerCase();
+		      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+		      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+		      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+		      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+		      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+		      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+		      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+		      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+		      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+		        
+		      } else {
+		        window.location.href="http://211.154.6.166:9000/";
+		      }
+		    }
+		    browserRedirect();
+		</script>
+		<meta charset="utf-8">
+		
+		<!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<title>myApp</title>
+		<link rel="stylesheet" type="text/css" href="./css/api.css" />
+		<link href="ionic/css/ionic.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style/css/theme_style.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/fontawesome-webfont.svg" />	
+
+	</head>
+
+	<body>
+		<div id="wrap" class="flex-wrap flex-vertical">
+    	
+    		<ion-nav-view></ion-nav-view>
+    	</div>
+	
+         <!--<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>-->
+		<!--ionic-->
+		<script src="scripts/Plugin/jquery320.js"></script>
+		<script src="scripts/Plugin/jquery.sparkline.min.js"></script>
+
+		<script src="ionic/js/ionic.bundle.min.js"></script>
+		<!--<script src="http://cdn.bootcss.com/moment.js/2.13.0/moment.min.js"></script>
+		<script src="http://cdn.bootcss.com/angular-moment/1.0.0-beta.6/angular-moment.min.js"></script>-->
+		<script type="text/javascript" src="scripts/Plugin/echarts.min.js"></script>
+		 <!--<script src="http://cdn.bootcss.com/ng-cordova/0.1.26-alpha/ng-cordova.min.js"></script>-->
+		<!--mainJs-->
+		<script type="text/javascript" src="scripts/App.js"></script>
+		<script type="text/javascript" src="scripts/route.js"></script>
+		<script type="text/javascript" src="scripts/provider/MyProvider.js"></script>
+		<script type="text/javascript" src="scripts/factory/ioniclocalStorage.js"></script>
+		<script type="text/javascript" src="scripts/service/publicFunc.js"></script>
+	    <script type="text/javascript" src="scripts/Plugin/ionic-datepicker.bundle.min.js"></script>
+		<script type="text/javascript" src="scripts/Plugin/ionic-timepicker.bundle.min.js"></script>	
+		<script type="text/javascript" src="scripts/Plugin/ionic-ratings.min.js"></script>	 
+		<script type="text/javascript" src="scripts/Plugin/ionic-toast.bundle.min.js"></script>	  	
+		<script type="text/javascript" src="scripts/Plugin/ionic-citypicker.min.js"></script>	  	
+		<!--home-controller-->
+		<script type="text/javascript" src="scripts/controller/home/login_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/home/register_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/home/forgetPwd_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/home/home_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/UserM/UserMag_ctr.js"></script>
+		
+		<!--gains-controller-->
+		<script type="text/javascript" src="scripts/controller/gains/gains_ctr.js"></script>
+		<!--project-controller-->
+		<script type="text/javascript" src="scripts/controller/project/project_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/project/projectN_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/project/addProject_ctr.js"></script>
+		
+		<!--report-controller-->
+		<script type="text/javascript" src="scripts/controller/report/addReport_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/report/report_ctr.js"></script>
+		<script type="text/javascript" src="scripts/controller/report/reportN_ctr.js"></script>		
+		<script type="text/javascript" src="./script/api.js"></script>
+		<script type="text/javascript">
+		      apiready = function () {
+		        $api.fixStatusBar( $api.dom('header') );
+		        api.setStatusBarStyle({
+		            style: 'light',
+		            color: '#236969'
+		        });
+		    }
+		</script>
+		<script type="text/javascript">
+
+			jQuery.support.cors = true;
+			var ApiUrl = "http://localhost:27221/";
+			$(function () {
+			    $.ajax({
+			        type: "get",
+			        url: ApiUrl + "api/Charging/GetAllChargingData",
+			        data: {},
+			        success: function (data, status) {
+			            if (status == "success") {
+			                $("#div_test").html(data);
+			            }
+			        },
+			        error: function (e) {
+			            $("#div_test").html("Error");
+			        },
+			        complete: function () {
+			
+			        }
+			    });
+			});
+		</script>
+		
+	</body>
+
+
+</html>

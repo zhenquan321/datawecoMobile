@@ -1,0 +1,42 @@
+<ion-view view-title="添加项目" class="white-bg" ng-controller="addProject_ctr">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ui-sref="tabs.project"style="font-size: 20px;padding: 7px;">
+				<i class="ion-close"></i>
+			</div>
+			<h1 class="title">创建项目</h1>
+			<div class="buttons Hdrights" ng-click="InsertProject()">
+				创建
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="pt10 has-header bg">
+		
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		
+		<div class="list addprojectcard section">
+
+		  <label class="item item-input ">
+		    <input type="text" placeholder="请输入项目名称"  id="projectName" ng-model="projectName">
+		  </label>
+		  <label class="item item-input">
+		    <textarea placeholder="请输入项目描述" class="" id="projectNameDescribe" ng-model="projectNameDescribe"></textarea>
+		  </label>
+		</div>
+
+		<div class="nei_list mt10 section">
+            <div class="list" ng-click="InsertProject()">
+                <a class="item item-icon-left" style="text-align: center;border: 0;height: 40px;padding: 11px;color: #009999;font-size: 18px;">
+                    创建
+                </a>
+            </div>
+        </div>
+
+		
+
+  </ion-item>
+</ion-list>
+		
+	</ion-content>
+</ion-view>

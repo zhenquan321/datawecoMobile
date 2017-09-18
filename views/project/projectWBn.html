@@ -1,0 +1,233 @@
+<ion-view view-title="添加项目" class="white-bg">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ng-show="!addKeywordsShow"ui-sref="modelselect"style="font-size: 20px;padding: 7px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<div class="buttons" ng-show="addKeywordsShow" ng-click="addKeyWordShowFun()" style="font-size: 20px;padding: 7px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<h1 class="title">{{selectedProjectName}}--<span style="color: #dbff96;font-weight: 600;font-size: 14px;">微博</span></h1>
+			<div class="buttons">
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="pt10 has-header bg" >
+		
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div style="margin-top: 3px;" ng-show="!addKeywordsShow">
+				<div class="section " style="text-align: left;">
+					<div class="list">
+					  <a class="item  item-icon-right" ng-click="addKeyWordShowFun()" style="border: 0px;font-size: 16px;color: #099;padding:12px 15px;">
+					   <span style="display: inline-block;margin-top: 2px;">添加关键词</span> 
+					    <i class="icon ion-ios-plus-outline"style="color: #777;"></i>
+					  </a>
+					</div>
+				</div>
+		</div>
+		<div ng-show="!addKeywordsShow">
+			<div class="item item-text-wrap mt10" style="padding: 0px; border: 0px;">
+	              <div class="section  " style="border-bottom:0px;">
+	                            <div class="row p0">
+	                                <div class=" col   text-center p0 ">
+	                                    <div class="row  pt10" style="border-right: 1px dashed #ccc; border-bottom: 1px dashed #ccc; ">
+	                                        <div class="col-33" style="font-size: 28px; padding-top: 5px; color: #009999; ">
+	                                            <i class="fa fa-search"></i>
+	                                        </div>
+	                                        <div class="col-67" style="text-align: left;">
+	                                            <div class="shuzhi_s">
+	                                                <div id="content_value1">27</div>
+	                                            </div>
+	                                            <div style=" font-size: 14px; margin-top: 3px; color: #7d7d7d;">
+	                                                已搜索关键词
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <div class=" col   text-center p0 ">
+	                                    <div class="row pt10" style=" border-bottom: 1px dashed #ccc; ">
+	                                        <div class="col-33" style="font-size: 28px; padding-top: 5px; color: #009999; ">
+	                                            <i class="fa fa-list-alt"></i>
+	                                        </div>
+	                                        <div class="col-67" style="text-align: left;">
+	                                            <div class="shuzhi_s">
+	                                                <span class="" id="content_value6">5224</span><span></span>
+	                                            </div>
+	                                            <div style=" font-size: 14px; margin-top: 3px; color: #7d7d7d;">
+	                                                已搜索连接
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="row p0">
+	                                <div class=" col   text-center p0">
+	                                    <div class="row" style="border-right: 1px dashed #ccc; border-bottom: 0px dashed #ccc; padding-top: 14px">
+	                                        <div class="col-33" style="font-size: 28px; padding-top: 5px; color: #009999; ">
+	                                            <i class="fa fa-weibo"></i>
+	                                        </div>
+	                                        <div class="col-67" style="text-align: left;">
+	                                            <div class="shuzhi_s">
+	                                                <div id="content_value3">微博</div>
+	                                            </div>
+	                                            <div style=" font-size: 14px; margin-top: 3px; color: #7d7d7d;">
+													已搜索信源
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <div class=" col   text-center p0">
+	                                    <div class="row" style=" border-bottom: 0px dashed #ccc; padding-top: 14px;">
+	                                        <div class="col-33" style="font-size: 28px; padding-top: 5px; color: #009999; ">
+	                                            <i class="fa fa-calendar"></i>
+	                                        </div>
+	                                        <div class="col-67" style="text-align: left;">
+	                                            <div class="shuzhi_s">
+	                                                <div id="content_value4" style="width:130%">2010/01-至今</div><!--{{GetStatisticsList.StartTime|date:'yyyy/MM/dd'}}-{{GetStatisticsList.EndTime|date:'yyyy/MM/dd'}}-->
+	                                            </div>
+	                                            <div style=" font-size: 14px; margin-top: 3px; color: #7d7d7d;">
+	                                                监测周期
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+
+	                        </div>
+	        </div> 
+
+			<!--<div class="section mt10" style="text-align: left;padding:10px 15px;">
+				<div class="TJCard">
+					<div class="tjcleft">
+						已检测关键词
+					</div>
+					<div class="tjcright">
+						646
+					</div>
+				</div>
+			</div>
+			
+			<div class="section mt10" style="text-align: left;padding:10px 15px;">
+				<div class="TJCard">
+					<div class="tjcleft">
+						已检测连接
+					</div>
+					<div class="tjcright">
+						4646
+					</div>
+				</div>
+			</div>-->
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height:250px;" id="D_lineChart"></div>
+				</div>
+			</div>
+				
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 200px;" id="D_PieChart"></div>
+				</div>
+			</div>
+			
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div class="row"style="padding: 0;">
+						<div class="col-50">
+							<div style="width: 100%;height: 380px;" id="WordFrequencyM"></div>
+						</div>
+						<div class="col-50">
+							<div style="width: 100%;height: 380px;" id="WordFrequencyD"></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
+
+			<!--<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 250px;" id="wordcloud1"></div>
+				</div>
+			</div>	-->
+			
+		
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 250px;" id="D_GetBubbleList"></div>
+				</div>
+			</div>
+			
+            <div class="mt10 section" style="margin:0 ">
+                <div class="item item-divider" style="background-color: #fff; font-weight: 600; border-bottom: 1px solid #099;color: #099; padding: 12px 15px 10px;">
+                    <span class="card_title">搜索连接信息</span>
+                </div>
+                <div class="" style=" padding:5px 0px 0; border:0px;">
+                    <div class="">
+                    	<div  ng-repeat="z in resultList" style="border-bottom: 1px solid #ccc;">
+                    		  <h2 style="margin: 15px 10px 5px; font-size: 15px;font-weight:600;"><a href="{{z.LinkUrl}}" target="_blank" style="color:#009999">{{z.Title.length>17? ((z.Title | limitTo:17)+"...") : z.Title}}</a></h2>
+                    		  <div style=" margin: 0px 10px; color: #777;text-indent: 2em;text-align: justify;">
+                            	{{z.Description.length>110? ((z.Description | limitTo:110)+"...") : z.Description }}
+                             </div>
+                             <div style="padding: 0 10px 10px ;color:#4e7f7f; text-align: right;">
+                             	——{{ z.PublishTime| date:'yyyy-MM-dd'}}
+                             </div>
+                    	</div>
+                        <div class="item  jia_zgd" ng-click="GetBaiduLevelLinksMore()" style="text-align: center; padding: 10px;background-color: #f7f7f7;">
+                            <span style="border: 1px solid #ccc;padding: 5px 15px 3px;border-radius: 5px;">加载更多</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>	
+			<div class="mt10 section" style="margin:0 ">
+                <div class="item item-divider" style="background-color: #fff; font-weight: 600; border-bottom: 1px solid #099;color: #099; padding: 12px 15px 10px;">
+                    <span class="card_title">搜索连接信息</span>
+                </div>
+                <div class="" style=" padding:5px 0px 0; border:0px;">
+				
+                </div>
+            </div>			
+		</div>
+			
+			
+			
+			
+		<div ng-show="addKeywordsShow">
+			 <div class="list head section" >
+		        <div style="padding: 5px 10px;">
+		            <div class="item item-input-inset  search_box " style="border: 0;">
+		                <label class="item-input-wrapper" ng-click="search_show_fun(2)">
+		                    <input type="text" placeholder="请输入搜索关键词" ng-model="keyword.searchInput" style="width:100%;height: 38px;">
+		                </label>
+		                <button class="button button-small" style="background-color: #fff;margin-left: 10px;margin-right: 5px;font-size: 16px;border: 1px solid #ccc;padding: 6px 12px 4px;color: #6b6b6b;" ng-click="keywordsSearch()">
+		                    <i class="fa fa-search"></i>搜索
+		                </button>
+		            </div>
+		        </div>
+		       
+		    </div>
+		    <div class="search_card mt10">
+                <div class="row title_sc">
+                    <!--<div class="col rms_s  "><div class="rrr">正在搜索</div></div>-->
+                    <div class="col rms_s active_sc">搜索记录</div>
+                </div>
+                <div class="guanjic_list">
+                    <span class="lest_n" ng-repeat="x in GetAllKeywordCategory_list">
+                        {{x.name}}<!--<i class="fa fa-close" ng-click="removeKeyword(x._id)"></i>-->
+                    </span>
+                </div>
+            </div>
+		</div>
+		
+		
+
+
+		
+		
+		
+		
+		
+		
+	</ion-content>
+</ion-view>

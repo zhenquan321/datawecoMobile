@@ -1,0 +1,175 @@
+//font
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+//全局字体设置
+@layout-font: 'Open Sans', Helvetica, Tahoma, Arial, "Microsoft YaHei", STXihei, SimSun,  Heiti, sans-serif;
+//color
+/*bar-color*/
+@primary-color:#099 !important;
+@primary-color-dark:#158681 !important;
+/*footer-color*/
+@primary-grey-color:#ddd !important;
+@primary-grey-color-dark:#666 !important;
+
+@primary-bg-color:#F6F6F4 !important;
+/*black-color*/
+@primary-black-color:#333 !important;
+@primary-black-color-dark:#666 !important;
+@ion-view-bg-color:rgb(236, 236, 236);
+//a
+@link-a-color:#333;
+
+//gains
+@section-bg-color:#fff ;
+@border-color:#D8D8D8 !important;
+@footer-bg-color:#F0F0F0 !important;
+
+//font
+@primary-text-bule-color:#529DFF !important;
+@primary-text--grey-color:#666 !important;
+@primary-text--grey-color-half:#aaa !important;
+
+
+//padding
+.p0{
+        padding: 0px !important;
+}
+.p20{
+        padding: 20px !important;
+}
+.pt10b0{
+    padding: 10px 0px 0px !important;
+}
+.pt10{
+    padding-top: 10px !important;
+}
+.pl44{
+    padding-left: 44px !important;
+}
+.pt20{
+    padding-top: 20px !important;
+}
+.pt5l20{
+        padding: 5px 20px !important;
+}
+.pt5l10{
+        padding: 5px 10px !important;
+}
+.plr10{
+    padding: 0 10px !important;
+}
+.pt20b10{
+    padding: 20px 0px 10px !important;
+}
+.plr10{
+    padding:  0 10px !important;
+}
+.plr25{
+    padding:  0 25px !important;
+}
+.pl20{
+    padding-left: 20px !important;
+}
+.pl10{
+    padding-left: 10px !important;
+}
+//margin
+.mt44{
+    margin-top: 44px !important;
+}
+.mt20{
+        margin-top: 20px !important;
+}
+.m20{
+        margin: 20px !important;
+}
+.mt10{
+        margin-top: 10px !important;
+}
+.mt30{
+            margin-top: 30px !important;
+}
+.mt70{
+            margin-top: 70px !important;
+}
+//float
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
+
+//position
+.position-r0{
+        position: absolute;
+    right: 0;
+}
+.position-l0{
+        position: absolute;
+    left: 0;
+}
+.position-b0{
+        position: absolute;
+    bottom: 0;
+}
+.position-t0{
+        position: absolute;
+    top: 0;
+}
+.position-l20{
+        position: absolute;
+    left: 20;
+}
+//main-color-bg
+.main-color-bg{
+        background-color: @primary-color!important;
+}
+.main-color{
+        color: @primary-color!important;
+}
+
+//border
+.bt1{
+    border-bottom: 1px solid @primary-grey-color;
+}
+.b0{
+        border:transparent;
+}
+.bt0{
+    border-bottom:transparent !important;
+}
+.pt8l15{
+    padding: 8px 15px ;
+}
+
+//width
+.width100{
+        width: 100%;
+}
+.relative{
+    position: relative;
+}

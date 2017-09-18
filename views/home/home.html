@@ -1,0 +1,370 @@
+
+<ion-view view-title="DataWeco" class="bg" ng-controller="home_ctr">
+
+	<ion-side-menus>
+
+	  <!-- 左侧菜单 -->
+	  <ion-side-menu side="left">
+	  	<ion-header-bar align-title="center" class="bar-positive">
+			<h1 class="title">DataWeco</h1>
+		</ion-header-bar>
+		<ion-content class=" has-header" >
+		  	<div id="homeCList" class="list">
+			    <a class="item item-icon-right"  href="">
+			    	<span menu-close>产品与服务</span>
+				    <i class="icon ion-ios-arrow-down"ng-show="listShow1" ng-click="listShowFun(1)"></i>
+				    <i class="icon ion-ios-arrow-left" ng-show="!listShow1"ng-click="listShowFun(1)"></i>
+				</a>
+				<div id="homeCList2" class="list" ng-show="listShow1">
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>影响力监测</span>
+					    <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>SEO-PR搜索优化公关</span>
+					  <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>商业模式设计咨询</span>
+					   <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>电商渠道优化</span>
+					    <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>D-SENTI深度舆情</span>
+					   <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>舆情大数据</span>
+					    <i class="icon ion-ios-arrow-right"></i>
+					</a>
+				</div>
+				<a class="item item-icon-right" href="">
+				    <span menu-close>解决方案</span>
+				    <i class="icon ion-ios-arrow-down" ng-show="listShow2" ng-click="listShowFun(2)"></i>
+				    <i class="icon ion-ios-arrow-left" ng-show="!listShow2"ng-click="listShowFun(2)"></i>
+				</a>
+				<div id="homeCList2" class="list" ng-show="listShow2">
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>网络影响力提升解决方案</span>
+					   <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>企业营销渠道优化解决方案</span>
+					    <i class="icon ion-ios-arrow-right"></i>
+					</a>
+					<a class="item item-icon-right"  href="">
+				    	<span menu-close>商业模式优化解决方案</span>
+					  <i class="icon ion-ios-arrow-right"></i>
+					</a>
+				</div>
+				<a class="item item-icon-right" href="">
+				    <span menu-close>点线云社区</span>
+				   
+				</a>
+				<a class="item item-icon-right" href="">
+				    <span menu-close>文档与支持</span>
+				  
+				</a>
+				<a class="item item-icon-right" href="">
+				    <span menu-close>合作伙伴</span>
+				  
+				</a>
+			</div>
+	  	</ion-content>
+	  </ion-side-menu>
+
+	 	  <!-- 中间内容 -->
+	  <ion-side-menu-content>
+	  		<ion-header-bar align-title="center" class="bar-positive">
+				<div class="buttons">
+					<button class="button"  ng-click="toggleLeftSideMenu()"><i class="ion-navicon"></i></button>
+				</div>
+				<h1 class="title">Dataweco</h1>
+				<div class="buttons">
+					<button class="button" ui-sref="login"><i class="ion-person"style="font-size: 22px;"></i></button>
+				</div>
+			</ion-header-bar>
+			
+			<ion-content class="bg  has-header" >
+			
+				<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+				<div class="section photoCard HAuto">
+		
+					<ion-slide-box class="HAuto">
+						<ion-slide class="HAuto">
+							<div class="box blue">
+								<img src="image/feng_3.png" style="width: 100%;" />
+							</div>
+						</ion-slide>
+						<ion-slide class="HAuto">
+							<div class="box yellow">
+								<img src="image/feng_1.png" style="width: 100%;" alt="" />
+							</div>
+						</ion-slide>
+						<ion-slide on-slide-changed="slideHasChanged(1)" class="HAuto">
+							<div class="box pink">
+								<img src="image/feng_2.png" style="width: 100%;" alt="" />
+							</div>
+						</ion-slide>
+					</ion-slide-box>
+				</div>
+				<div class="">
+					<div class="section " style="text-align: left;padding:10px 15px;height: 40px;position: relative;box-shadow: 0 0 0 ;border-top:1px solid #e4e4e4;" ui-sref="register">
+						<div ng-class="{0:'PositionStart',2:'PositionEnd',1:'PositionState'}[PositionChange]"style="width: 100%;">
+							<span style="width: 100%;"><span class="tishi"><i class="ion-ios-bell "></i></span><span style="margin-left: 20px;">立即注册，即可享有你所需要的大数据！</span></span> 
+						</div>
+					</div>
+				</div>
+			<div class="serverModal ">
+				<div class="titleSer">
+					丰富多样的服务
+				</div>
+				<div class="SMcard">
+					<div class="row">
+						<div class="col-33 left">
+							<div class="iconTop">
+								<i class="fa fa-rss-square"></i>
+							</div>
+							<div class="wenBt">
+								影响力监测
+							</div>
+						</div>
+						<div class="col-67 right">
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>服务背景</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>服务对象</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>核心技术</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>SaaS+移动端服务系统</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="SMcard">
+					<div class="row">
+						<div class="col-33 left">
+							<div class="iconTop">
+								<i class="ion-ios-analytics"></i>
+							</div>
+							<div class="wenBt">
+								SEO-PR优化
+							</div>
+						</div>
+						<div class="col-67 right mt10">
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>创造搜索流量</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>品牌战略传播定制化</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>媒体平台的发稿服务</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="SMcard">
+					<div class="row">
+						<div class="col-33 left">
+							<div class="iconTop">
+								<i class="fa fa-users"></i>
+							</div>
+							<div class="wenBt">
+								商业模式设计
+							</div>
+						</div>
+						<div class="col-67 right">
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>为创业团队提供咨询服务</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>团队运营优化</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>专业市场专家</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>海量精准数据</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="SMcard">
+					<div class="row">
+						<div class="col-33 left">
+							<div class="iconTop">
+								<i class="fa fa-bar-chart"></i>
+							</div>
+							<div class="wenBt">
+								电商渠道优化
+							</div>
+						</div>
+						<div class="col-67 right">
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>为品牌产品在线营销</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>搜索引擎导流链接分析</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>移动端渠道优劣势评测</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>SaaS+移动端服务系统</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="SMcard">
+					<div class="row">
+						<div class="col-33 left">
+							<div class="iconTop">
+								<i class="fa fa-bullseye"></i>
+							</div>
+							<div class="wenBt">
+								D-SENTI舆情
+							</div>
+						</div>
+						<div class="col-67 right">
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>社会行业</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>企业品牌</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>忠诚用户</span></div>
+							<div class="listS"><a><i class="ion-android-send"></i></a><span>潜在危机</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="serverModal2 ">
+				<div class="titleSer">
+					一步到位的解决方案
+				</div>
+				<div class="SMcard2">
+					<div class="title mt10">
+						<i class="fa fa-globe"></i><br />
+						<span>网络影响力提升解决方案</span>
+					</div>
+					<p>
+						为全球正在兴起的影响力投资提供深度舆情监测服务。影响力监测以社会创新与技术创新公司、投资孵化器为服务对象，为他们深入解读和细化分析利益相关各方的对客户、目标市场、产品服务、业务战略的重要看法，以服务于战略管理
+					</p>
+				</div>
+				<div class="SMcard2">
+					<div class="title">
+						<i class="fa fa-sitemap"></i><br />
+						<span>企业营销渠道优化解决方案</span>
+					</div>
+					<p>
+						为品牌产品在线营销做： 电商平台渠道竞争优势监测、 社交平台品牌提及监测、 搜索引擎导流链接分析、 移动端渠道优劣势评测。根据分析报告发现问题，为客户做出最佳的改进方案，并持续跟进以促进企业发展。
+					</p>
+				</div>
+
+				<div class="SMcard2">
+					<div class="title">
+						<i class="fa fa-server"></i><br />
+						<span>商业模式优化解决方案</span>
+					</div>
+					<p>
+						资深市场专家在海量数据，科学化的分析方法以及精湛的科技技术的基础上， 利用商业模式设计工具为创业团队提供商业计划、战略制定、模式设计的咨询服务； 利用执行绩效管理工具比如平衡积分卡为团队运营优化提供咨询服务。
+					</p>
+				</div>
+			</div>
+				</div>
+			<div class="serverModal ">
+				<div class="titleSer">
+					点线云服务优势
+				</div>
+				<div class="SMcard3"> 
+					<div class="row pt10">
+						<div class="col-33 SMC3col "ng-class="{true:'SMcard3Active',false:''}[SMC3col==1]"ng-click="SMC3colFun(1)">
+							<div class="icoin">
+		                        <span class="fa fa-pencil-square-o"></span>
+		                    </div>
+		                    <div class="mt10">
+		                    	官方签约
+		                    </div>
+
+						</div>
+						<div class="col-33 SMC3col"ng-class="{true:'SMcard3Active',false:''}[SMC3col==2]"ng-click="SMC3colFun(2)">
+							<div class="icoin">
+		                        <span class="fa fa-user-circle"style=" padding: 18px 18px 17px 19px"></span>
+		                    </div>
+		                    <div class="mt10">
+		                    	专职产品经理
+		                    </div>
+							
+						</div>
+						<div class="col-33 SMC3col"ng-class="{true:'SMcard3Active',false:''}[SMC3col==3]"ng-click="SMC3colFun(3)">
+							<div class="icoin">
+		                        <span class="fa fa-cubes"style="padding: 18px 11px 17px 15px; "></span>
+		                    </div>
+		                    <div class="mt10">
+		                    	海量数据
+		                    </div>
+						</div>						
+					</div>
+					<div class="SMcard3Nei">
+						<div class="neiRong"ng-show="SMC3col==1">
+							点线云科技作为技术支持服务平台与您直接签单， 以专业的技术与资深市场专家为提供最全最适合的数据报告与资源优化配置建议。
+						</div>
+						<div class="neiRong"ng-show="SMC3col==2">
+							从您提交需求的一刻起，将会有资深需求分析师为您提供一对一服务，并为您的需求配一名资深产品经理全程为您解决问题并提供适当帮助。
+
+						</div>
+						<div class="neiRong"ng-show="SMC3col==3">
+							一站式的数据挖掘与分析平台。为用户的大数据集成、提供完整的企业级解决方案，让用户能最大限度的挖掘自身商业价值。
+
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="Homefooter mt10">
+				<div class="row"style="padding: 0 20px;">
+					<div class="col-25 FirList">
+						 产品服务
+					</div>
+					<div class="col-25 FirList">
+						 解决方案
+					</div>
+					<div class="col-25 FirList">
+						 法律声明
+					</div>
+					<div class="col-25 FirList"style="border: 0;">
+						 隐私保护
+					</div>
+				</div>
+				<div class="row mt20">
+					<div class="col-40">
+						<div class="img_wc" style="margin: 0 auto;">
+							<img src="image/wechat_code.png"/>
+						</div>
+						
+					</div>
+
+					<div class="col-60">
+						<div class="footer-certificate">
+                            <div style="height: 40px;padding-top: 8px;">                        
+                               <div style="height: 30px;line-height: 30px;float: left;">
+                               		<i class="fa fa-cogs"></i>
+                               </div> 
+                                <div style="height: 30px;line-height: 30px;float: left;margin-left: 10px;">
+                                	<span>金牌运维</span>
+                                </div>
+                            </div>
+                            <div style="height: 40px;padding-top: 8px;">                        
+                               <div style="height: 30px;line-height: 30px;float: left;">
+                               		<i class="fa fa-cloud"></i>
+                               </div> 
+                                <div style="height: 30px;line-height: 30px;float: left;margin-left: 10px;">
+                                	<span>可信云服务认证</span>
+                                </div>
+                            </div>
+                            <div style="height: 40px;padding-top: 8px;">                        
+                               <div style="height: 30px;line-height: 30px;float: left;padding: 0 5px;">
+                               		<i class="fa fa-shield"></i>
+                               </div> 
+                                <div style="height: 30px;line-height: 30px;float: left;margin-left: 10px;">
+                                	<span>点线云安全</span>
+                                </div>
+                            </div>
+                        </div>
+											
+					</div>
+				</div>
+
+			</div>		
+			<div class="footerBtm">
+				版权所有 © 点线云科技（北京）有限公司<br />
+				京ICP备00000000号-00
+			</div>
+			</ion-content>
+		
+	  </ion-side-menu-content>
+
+	</ion-side-menus>
+			
+			
+			
+			
+	
+</ion-view>

@@ -1,0 +1,64 @@
+//忘记密码
+var home_ctr = myApp.controller('home_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading','$ionicSideMenuDelegate','$ionicSlideBoxDelegate',function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage,$ionicLoading,$ionicSideMenuDelegate,$ionicSlideBoxDelegate) {
+
+	$scope.PositionChange=1;
+	//下拉刷新
+	$scope.doRefresh = function() {
+
+			$scope.$broadcast('scroll.refreshComplete');
+	};
+	//打开侧栏
+	  $scope.toggleLeftSideMenu = function() {
+	    $ionicSideMenuDelegate.toggleLeft();
+	  };
+	
+	//侧栏下拉框
+	$scope.listShowFun=function(num){
+		if(num==1){
+			$scope.listShow1=!$scope.listShow1;
+		}else if(num==2){
+			$scope.listShow2=!$scope.listShow2;
+		}else if(num==3){
+			$scope.listShow3=!$scope.listShow3;
+		}else if(num==4){
+			$scope.listShow4=!$scope.listShow4;
+		}else if(num==5){
+			$scope.listShow5=!$scope.listShow5;
+		}
+		
+		
+	}
+	//自动切换幻灯片
+	$scope.nextSlide = function(a) {
+		var a=a+1;
+		if(a>2){
+			a=0
+		}
+	  	$timeout(function(){
+	  		 $ionicSlideBoxDelegate.slide(a, [500]);
+	  		 $scope.nextSlide(a);
+	  	},6000)
+	  }
+	$scope.nextSlide(0);
+	//位置移动
+	$scope.PositionChangeFun=function(a){
+		
+		$scope.PositionChange=a;
+		if(a==2){
+			a=0;
+			$timeout(function(){
+					$scope.PositionChangeFun(0);
+			},6000);
+		}else{
+			$timeout(function(){
+					$scope.PositionChangeFun(2);
+			},50);
+		}
+
+	}
+	$timeout(function(){
+		$scope.PositionChangeFun(2);
+	},1000);
+	
+	
+}])

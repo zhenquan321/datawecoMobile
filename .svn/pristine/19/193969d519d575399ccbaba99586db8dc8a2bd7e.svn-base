@@ -1,0 +1,20 @@
+<ion-view view-title="添加项目" class="white-bg">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ui-sref="tabs.project"style="font-size: 22px;padding: 5px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<h1 class="title">{{selectedProjectName}}</h1>
+			<div class="buttons">
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="pt10 has-header">
+		
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		
+		
+		
+	</ion-content>
+</ion-view>

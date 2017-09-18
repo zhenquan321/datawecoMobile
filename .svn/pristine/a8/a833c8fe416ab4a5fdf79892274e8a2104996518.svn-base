@@ -1,0 +1,117 @@
+<ion-view view-title="DLCould"ng-controller="gains_ctr">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div class="buttons">
+			<i></i>
+		</div>
+		<h1 class="title">DLCould</h1>
+		<div class="buttons">
+			<i></i>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="bg  has-header" >
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div class="section photoCard"style="height: 220px;">
+
+			<ion-slide-box style="height: 100%;">
+				<ion-slide>
+					<div class="box blue">
+						<img src="image/feng_3.png" style="width: 100%;height: 100%;" />
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="box yellow">
+						<img src="image/feng_1.png" style="width: 100%;height: 100%;" alt="" />
+					</div>
+				</ion-slide>
+				<ion-slide on-slide-changed="slideHasChanged(1)">
+					<div class="box pink">
+						<img src="image/feng_2.png" style="width: 100%;height: 100%;" alt="" />
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</div>
+		<div id="">
+
+			<div class="section"style="border-top: 1px solid #e0e0e0;">
+				<div class="row plr10">
+					<div class=" col-20 pt10 pb5 section-item text-center">
+						<div class="icon-box" style="color: #ee3f02;">
+							<i class="fa fa-retweet"></i>
+						</div>
+						<div class="section-title">
+							SEO优化
+						</div>
+					</div>
+					<div class=" col-20  pt10 pb5  section-item text-center">
+						<div class="icon-box" style="color: #ffb816;">
+							<i class="fa fa-users"style="font-size: 30px;"></i>
+						</div>
+						<div class="section-title">
+							商业模式
+						</div>
+					</div>
+					<div class=" col-20  pt10 pb5  section-item text-center">
+						<div class="icon-box"style="color: #099;">
+							<i class="fa fa-rss-square"></i>
+						</div>
+						<div class="section-title">
+							影响监测
+						</div>
+					</div>
+					<div class=" col-20  pt10 pb5  section-item text-center">
+						<div class="icon-box" style="color: #01cd9e;">
+							<i class="fa fa-bar-chart" style="font-size:28px;"></i>
+						</div>
+						<div class="section-title">
+							电商渠道
+						</div>
+					</div>
+					<div class=" col-20  pt10 pb5  section-item text-center">
+						<div class="icon-box" style="color: #009fe8;">
+							<i class="fa fa-bullseye"></i>
+						</div>
+						<div class="section-title">
+							深度舆情
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 200px;" id="projectNow"></div>
+				</div>
+			</div>
+
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 200px;" id="reportNow"></div>
+				</div>
+			</div>
+			
+			<div class="mt10">
+				<div class="section p20" style="text-align: left;padding:10px 15px;color:#777">
+					<div>一个新的评论来自于·<span style="color:#099;font-weight: 600;">社区分享</span></div>
+					<h4 style="margin: 5px 0;"> 成功设计大赛</h4>
+					<div>
+						如果说“创新是公司未来发展的核心驱动力”（杨元庆），那么，“设计”则“是实现企业创新最有价值的战略工具”。（菲利普·科特勒）http://www.bpo.net...
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt10"style="margin-bottom: 10px;">
+					<div class="section p20" style="text-align: left;padding:10px 15px;color:#777">
+					<div>收到新的报告分享·<span style="color:#099;font-weight: 600;">基督徒影视内容</span></div>
+					<div>
+					基督徒福音视频分享网站7GTV的传播，似乎受到一定程度的屏蔽。所能检索到的收录内容量很小
+					</div>
+				</div>
+			</div>
+						
+			
+			
+		</div>
+	</ion-content>
+</ion-view>

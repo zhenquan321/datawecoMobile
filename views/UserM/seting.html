@@ -1,0 +1,85 @@
+<ion-view view-title="用户消息" class="white-bg">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ui-sref="tabs.UserMag"style="font-size: 20px;padding: 7px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<h1 class="title">设置</h1>
+			<div class="buttons">
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="bg has-header">
+
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" style="z-index: 10;"></ion-refresher>
+        <div id="userMag" >
+        	<div id="userMag2">
+        		<div class="userMSHeader">
+                    <img ng-src="{{$root.PictureSrc}}" alt="用户头像" ng-if="$root.PictureSrc" />
+                    <img ng-src="image/AB_B.png" alt="用户头像" ng-if="!$root.PictureSrc" />
+                    <span class="SMname">   
+                        <span ng-if="$root.Gender">{{$root.Gender}}</span>
+                        <span ng-if="!$root.Gender">{{$root.LoginName}}</span>
+                    <br />
+                    <span class="biaozhu">会员</span>
+                </span>
+                    
+
+                 
+            	</div>
+            	<div class="erwema">
+            		<i class="fa fa-qrcode"></i><i class="fa fa-angle-right" style="font-size: 28px;"></i>
+            	</div>
+        	</div>
+            <div class="nei_list">
+                <div class="list">
+                    <a class="item item-icon-left"style="border-bottom:0;">
+                        <i class="ion-android-contact"></i>
+                        个人信息
+                        <span class="item-note">
+                            完整度：<span style="color: #52a290">80%</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+	
+            <div class="nei_list mt10">
+                <div class="list">
+
+                    <a class="item item-icon-left item-icon-right" style="border-bottom:0;">
+                        <i class="fa fa-resistance"></i>
+                        账户与安全
+                    </a>
+                </div>
+            </div>
+
+            <div cl
+             <div class="nei_list mt10">
+                <div class="list">
+
+                    <a class="item item-icon-left">
+                        <i class="ion-android-create"></i>
+                        反馈意见
+                    </a>
+
+                    <a class="item item-icon-left item-icon-right" style="border-bottom:0;">
+                        <i class="ion-android-settings"></i>
+                        设置
+                    </a>
+                </div>
+            </div>
+            <div class="nei_list mt10">
+                <div class="list" ng-click="getout()">
+                    <a class="item item-icon-left" style="text-align: center; border: 0; height: 38px; padding: 10px; color: #de6a6a;">
+                        退出账号
+                    </a>
+                </div>
+            </div>
+
+        </div>
+		
+		
+	</ion-content>
+</ion-view>

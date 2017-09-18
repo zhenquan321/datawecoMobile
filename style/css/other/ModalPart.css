@@ -1,0 +1,396 @@
+#projectCard .project_card .right .desc .photoCard {
+  height: 35%;
+}
+.icon-box {
+  margin: 10px auto 0px;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 27px;
+  width: 40px;
+  height: 40px;
+}
+.icon-box i {
+  font-size: 32px;
+}
+.section {
+  background-color: #ffffff;
+  border-bottom: 0px solid #e0e0e0!important;
+}
+.section .section-item .section-title {
+  padding: 0 0 10px 0!important;
+}
+.pb5 {
+  padding-bottom: 5px!imortant;
+}
+.bg {
+  background-color: #f1f1f1;
+}
+.tabs-positive > .tabs,
+.tabs.tabs-positive {
+  background-color: #fff;
+  border: 0px;
+  border-top: 1px solid #ccc;
+  height: 52px;
+}
+.tab-item .icon {
+  font-size: 28px;
+  height: 28px;
+  margin-top: 4px;
+}
+.selectButGroup {
+  margin-top: 42px;
+  background-color: #099;
+  padding: 2px 15% 10px;
+  position: relative;
+  z-index: 1000;
+}
+.selectButGroup .button {
+  height: 22px;
+  min-height: 22px;
+  padding: 0px 16px;
+  line-height: 21px;
+  border: 1px solid #fff;
+  background-color: #099;
+  color: #fff;
+  font-size: 14px;
+}
+.selectButGroup .bgactive {
+  background-color: #fff;
+  color: #099;
+}
+#projectCard .project_card {
+  position: relative;
+  padding: 0px;
+  height: 120px;
+}
+#projectCard .project_card .left {
+  position: absolute;
+  left: 0;
+}
+#projectCard .project_card .left .top {
+  height: 130px;
+  width: 120px;
+  border-bottom: 1px solid #099;
+  background-color: #fff;
+  padding: 10px;
+}
+#projectCard .project_card .left .top .lianJie {
+  height: 100px;
+  width: 100px;
+  border-radius: 55px;
+  background-color: #f3f3f3;
+  line-height: 15px;
+  border: 1px solid #099;
+  text-align: center;
+}
+#projectCard .project_card .left .top .lianJie .suzi {
+  font-size: 24px;
+  margin-top: 40px;
+  display: inline-block;
+  color: #099;
+}
+#projectCard .project_card .left .top .lianJie .ms {
+  color: #929292;
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 12px;
+}
+#projectCard .project_card .left .top .lianJie .ms_2 {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+#projectCard .project_card .left .bottom {
+  height: 40px;
+  background-color: #e6e6e6;
+  line-height: 42px;
+  color: #777;
+  font-size: 12px;
+}
+#projectCard .project_card .left .bottom i {
+  display: inline-block;
+}
+#projectCard .project_card .right {
+  width: 100%;
+  padding-left: 120px;
+}
+#projectCard .project_card .right .desc {
+  padding-top: 7px;
+  margin-top: 0px!important;
+  color: #777;
+  padding-left: 2px;
+}
+#projectCard .project_card .right .title {
+  line-height: 26px;
+  color: #099;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+#projectCard .project_card .right .top {
+  border-bottom: 1px solid #ccc;
+  height: 130px;
+}
+#projectCard .project_card .right .miaoshu_n {
+  white-space: initial;
+  padding-right: 10px;
+  word-wrap: break-word;
+  word-break: normal;
+}
+#projectCard .project_card .right .subTitle {
+  color: #ccc;
+  font-size: 12px;
+}
+#projectCard .PCButYS {
+  display: block;
+  height: 40px;
+  padding: 0px;
+  min-height: 40px;
+  line-height: 40px;
+  width: 90px;
+  background-color: #8c8c8c;
+  border-bottom: 1px solid #fdfdfd;
+}
+#userMag .title_um {
+  height: 250px;
+  width: 100%;
+  background: url(images/bijing.png) no-repeat #ffffff;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 30px;
+}
+#userMag .title_um img {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  padding: 5px;
+  border: 1px solid #e8e8e8;
+}
+#userMag .title_um span {
+  font-size: 18px;
+  color: #fff;
+}
+#userMag .nei_list {
+  padding: 0 15px ;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0px 1px 2px #dedede;
+}
+#userMag .nei_list .list a {
+  margin: 0px!important;
+  border: 0px;
+  border-bottom: 1px solid #eee;
+  padding: 13px 0px 10px;
+  font-size: 16px;
+  box-shadow: 0 0 0 #fff ;
+}
+#userMag .nei_list .list a i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #68817b;
+}
+.TJCard {
+  height: 46px;
+  line-height: 46px;
+}
+.TJCard .tjcleft {
+  float: left;
+}
+.TJCard .tjcright {
+  float: right;
+  font-size: 20px;
+  color: #666;
+}
+.report_card {
+  padding: 15px;
+}
+.report_card .RPheader {
+  color: #888;
+}
+.report_card .RPheader span {
+  color: #777;
+  font-weight: 600;
+}
+.report_card .shearer .left {
+  float: left;
+}
+.report_card .shearer .left img {
+  display: inline-block;
+  width: 32px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+.report_card .shearer .left span {
+  font-weight: 600;
+  font-size: 16px;
+  color: #808080;
+}
+.report_card .shearer .right {
+  float: right;
+  color: #888;
+  line-height: 32px;
+}
+.Hdrights {
+  font-size: 16px;
+  padding-right: 9px;
+  padding-top: 8px;
+  color: #fbfbfb;
+}
+.addprojectcard {
+  padding: 15px 0;
+  background-color: #fff;
+}
+.addprojectcard .title {
+  background-color: #f7f7f7;
+}
+.addprojectcard textarea {
+  height: 200px;
+}
+.search_card {
+  width: 100%;
+  min-height: 50px;
+  background-color: #fff;
+  margin-top: 65px;
+}
+.search_card .title_sc {
+  padding: 0px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+.search_card .title_sc .rms_s {
+  height: 40px;
+  line-height: 30px;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: -1px;
+  padding: 5px 0px 5px 12px;
+}
+.search_card .title_sc .rrr {
+  border-right: 1px solid #ccc;
+  width: 100%;
+}
+.search_card .title_sc .active_sc {
+  border-bottom: 1px solid #099;
+}
+.search_card .guanjic_list {
+  padding-top: 5px;
+  min-height: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.search_card .guanjic_list .lest_n {
+  display: inline-block;
+  border: 1px dashed #ccc;
+  padding: 4px 16px;
+  font-size: 14px;
+  color: #555;
+  background: #f6f6f6;
+  margin: 5px;
+  border-radius: 20px;
+  height: 30px;
+}
+.search_card .guanjic_list .lest_n i {
+  margin-left: 5px;
+}
+.search_card .guanjic_list .active_slet {
+  background: #99b968;
+  color: #fff;
+  border-color: #99b968;
+}
+#gains_ss .bg {
+  z-index: 0;
+  left: 0;
+  width: 100%;
+  background: #f3f3f3;
+  background-size: 100%;
+}
+#gains_ss .head {
+  background: url(bg_header.jpg) no-repeat #7cb228;
+  background-size: cover;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 1px 2px 4px #ccc;
+}
+#gains_ss .bar.bar-positive {
+  background-image: none;
+}
+#gains_ss .pane {
+  background: #f3f3f3;
+}
+#gains_ss .search_box {
+  border-color: rgba(221, 221, 221, 0);
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 3px!important;
+}
+#gains_ss .item-input-wrapper {
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  border-radius: 0px;
+}
+#gains_ss .button:hover {
+  color: #73b031;
+  text-decoration: none;
+  cursor: pointer;
+}
+#gains_ss .card_title {
+  padding-left: 8px;
+  border-left: 4px solid #70b035;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  margin-top: 2px;
+  color: #555;
+}
+#gains_ss .jia_zgd {
+  min-height: 15px;
+  margin-top: -2px;
+  text-align: center;
+}
+#gains_ss .tabs-positive > .tabs,
+#gains_ss .tabs.tabs-positive {
+  background-color: #fdfdfd;
+}
+#gains_ss .card {
+  box-shadow: 0px 1px 2px #dedede;
+}
+.shuzhi_s {
+  color: #009999;
+  font-size: 18px;
+}
+.border-b-1-ccc {
+  border-bottom: 1px dashed #ccc;
+}
+.border-r-1-ccc {
+  border-right: 1px dashed #ccc;
+}
+.Source-Card {
+  padding: 10px;
+}
+.Source-Card img {
+  width: 50px;
+}
+.Source-Card i {
+  color: #099;
+  font-size: 56px;
+}
+.Source-Card .title {
+  color: #608a8a;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.Source-Card .name {
+  margin-top: 10px;
+  color: #099;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 16px;
+}

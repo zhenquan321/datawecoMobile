@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/*bar-color*/
+/*footer-color*/
+/*black-color*/
+.p0 {
+  padding: 0px !important;
+}
+.p20 {
+  padding: 20px !important;
+}
+.pt10b0 {
+  padding: 10px 0px 0px !important;
+}
+.pt10 {
+  padding-top: 10px !important;
+}
+.pl44 {
+  padding-left: 44px !important;
+}
+.pt20 {
+  padding-top: 20px !important;
+}
+.pt5l20 {
+  padding: 5px 20px !important;
+}
+.pt5l10 {
+  padding: 5px 10px !important;
+}
+.plr10 {
+  padding: 0 10px !important;
+}
+.pt20b10 {
+  padding: 20px 0px 10px !important;
+}
+.plr10 {
+  padding: 0 10px !important;
+}
+.plr25 {
+  padding: 0 25px !important;
+}
+.pl20 {
+  padding-left: 20px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
+.mt44 {
+  margin-top: 44px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.m20 {
+  margin: 20px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt70 {
+  margin-top: 70px !important;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.position-r0 {
+  position: absolute;
+  right: 0;
+}
+.position-l0 {
+  position: absolute;
+  left: 0;
+}
+.position-b0 {
+  position: absolute;
+  bottom: 0;
+}
+.position-t0 {
+  position: absolute;
+  top: 0;
+}
+.position-l20 {
+  position: absolute;
+  left: 20;
+}
+.main-color-bg {
+  background-color: #009999 !important;
+}
+.main-color {
+  color: #009999 !important;
+}
+.bt1 {
+  border-bottom: 1px solid #dddddd;
+}
+.b0 {
+  border: transparent;
+}
+.bt0 {
+  border-bottom: transparent !important;
+}
+.pt8l15 {
+  padding: 8px 15px ;
+}
+.width100 {
+  width: 100%;
+}
+.relative {
+  position: relative;
+}
+html,
+body {
+  font-family: 'Open Sans', Helvetica, Tahoma, Arial, "Microsoft YaHei", STXihei, SimSun, Heiti, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  background-color: #ececec;
+}
+button,
+input,
+select,
+textarea,
+label,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', Helvetica, Tahoma, Arial, "Microsoft YaHei", STXihei, SimSun, Heiti, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.ion-view {
+  background-color: #ececec !important;
+}
+.input-label {
+  font-size: .875rem;
+}
+.input-label {
+  width: 20%;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+.bg {
+  background-color: #f6f6f4;
+}
+.white-bg {
+  background-color: #fff ;
+}
+.section {
+  box-shadow: 0 0 4px #d0d0d0;
+}
+.item-complex .item-content {
+  padding: 0px;
+}
+.list .item {
+  padding: 0px;
+  border: 0px;
+  box-shadow: #dedede 0px 0px 4px;
+}
+.projectMSCard {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 0px;
+  box-shadow: 0px 1px 3px #ccc;
+  position: relative;
+  margin-top: 22px;
+}
+.projectMSCard .MSmiaoshu {
+  text-align: center;
+}
+.projectMSCard h3 {
+  color: #099!important;
+  margin-bottom: 4px;
+  font-size: 18px!important;
+}
+.projectMSCard p {
+  text-align: justify;
+  margin-bottom: 0px;
+  padding: 10px;
+  border: 1px dashed #9c9c9c;
+  border-radius: 5px;
+  background-color: #f1f0f0;
+}
+.projectMSCard .jiage {
+  margin-bottom: 5px;
+  color: #797979;
+  font-size: 14px;
+}
+.projectMSCard .ProjectNei {
+  border: 1px dashed #d4d4d4;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  color: #5f5d5d;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 10px;
+}
+.projectMSCard .ProjectNei .num12 {
+  color: #099;
+}
+.positionIcon {
+  position: absolute;
+  top: 12px;
+  color: #099;
+  font-size: 32px;
+  z-index: 1000;
+  left: 115px;
+}

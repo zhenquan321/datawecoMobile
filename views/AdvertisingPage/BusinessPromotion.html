@@ -1,0 +1,123 @@
+ <ion-view view-title="个人信息">
+    <ion-content class="bg">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" style="z-index: 10;"></ion-refresher>
+			<div>
+				<img src="image/AB_B.png" style="width:100%">
+			</div>
+			<div style="position: absolute;right: 10px;top: 10px; color: #fff; font-size: 20px;">
+				<i class="ion-close" ui-sref="home"></i>
+			</div>
+			<div class="miaoshu">
+				DataWeco利用搜索技术帮助公益人更加准确把握差异化的受助人群、有针对地满足优先需求，并将实践公益的宝贵洞见、成功案例、研究报告，以学习型社区的方式来分享、支持新一代的社会创新实践。以智能数据为公益效力，让数据服务助人！
+			</div>
+			<div class="card acbCard"style="margin-top: -100px;">
+				<div style="text-align: center;">
+					<span class="cardtitle">社创数据</span> 
+				</div>
+				<div class="item item-text-wrap " ng-show="!haveSaomiaoed">
+					<div class="cardbody">
+						<h3>共有198份VIP服务账户提供，剩余</h3>
+						<div class="sehngyu">
+							<span>1</span>
+							<span>6</span>
+							<span>2</span>
+						</div>
+						<div class="cardMs">
+							<span ng-click="changeZFFS(1)" ng-class="{true:'active',false:''}[ZFFS==1]">扫描二维码</span>  /  <span ng-click="changeZFFS(2)"ng-class="{true:'active',false:''}[ZFFS==2]">直接支付</span>
+						</div>
+						<div class="zhifuewm mb0 mt0" ng-show="ZFFS==1">
+							<img src="{{qrcode}}" alt="">
+						</div>
+						<div ng-show="ZFFS==2">
+							<button class="button button-block button-positive mt20" style="background-color: #099;"ng-show="changepayG" ng-click="InsertOrderByUrl(7)">
+								立即支付
+							</button>
+							<button class="button button-block button-positive mt20" style="background-color: #099;"ng-show="!changepayG" ng-click="InsertOrderByUrl(8)">
+								立即支付
+							</button>
+							<a href="{{response.url}}">{{response.url}}</a><br>
+						</div>
+
+						<div class="changepay"style="position: relative;">
+							<span class="CPleft" ng-class="{true:'active',false:''}[changepayG]" ng-click="changepayGFun(1)">高级VIP</span>
+							<span class="CPright"ng-class="{true:'active',false:''}[!changepayG]"ng-click="changepayGFun(0)">普通会员</span>
+							<div class="positionIcon" ng-show="changepayG">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<div class="positionIcon" style="left: 187px;" ng-show="!changepayG">
+								<i class="fa fa-angle-down"></i>
+							</div>
+						</div>
+						<div class="projectMSCard">	
+								<div class="">	
+									<div class="title MSmiaoshu" >
+										<h3 >
+											{{ProductShow.Name}}
+										</h3>
+										<div class="jiage">
+											<span>价格</span>：<span>￥:{{ProductShow.Price}}</span>
+										</div>
+										<p>
+											{{ProductShow.Description}}
+										</p>
+									</div>
+									<div class="ProjectNei">
+										<span>项目数</span>：<span class="num12">{{ProductShow.ProjectNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>简报数</span>：<span class="num12">{{ProductShow.ReportNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>关键词数</span>：<span class="num12">{{ProductShow.KeywordNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>链接数</span>：<span class="num12">{{ProductShow.LinkNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>技术支持数</span>：<span class="num12">{{ProductShow.SupportNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>数据分析数</span>：<span class="num12">{{ProductShow.ProjectNum}}</span>
+									</div>
+									<div class="ProjectNei">
+										<span>培训数</span>：<span class="num12">{{ProductShow.TrainNum}}</span>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<div class="item item-text-wrap "   ng-show="haveSaomiaoed">
+					<div class="list"style="margin: 40px 10px 10px;">
+						<p style="margin-top: -25px;margin-bottom: 5px;text-align: center;color: #099;">感谢您的支持！请输入您账户的登录名与密码！</p>
+						<label class="item item-input" style="border-radius: 5px 5px 0 0;">
+							<span class="input-label">登录名</span>
+							<input type="text" ng-model="userInfoCrt.loginName">
+						</label>
+						<label class="item item-input">
+							<span class="input-label">密码</span>
+							<input type="password"  ng-model="userInfoCrt.password">
+						</label>
+						<label class="item item-input" style="border-radius:0 0 5px 5px ;">
+							<span class="input-label">邮箱</span>
+							<input type="email" ng-model="userInfoCrt.email">
+						</label>
+						<button class="button button-block button-positive mt20" style="background-color: #099;" ng-click="createUser()">
+							确定
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="buttonMS">
+				<p>
+					社创数据倾情回馈用户，你值得拥有！
+				</p>
+				<div class="changeLei">
+					<span class="CPleft active" ng-click="changepayGFun(1)">活动规则</span>
+					<span class="CPright active"ng-click="changepayGFun(0)">分享给朋友</span>
+				</div>
+			</div>
+    </ion-content>
+</ion-view>
+
+

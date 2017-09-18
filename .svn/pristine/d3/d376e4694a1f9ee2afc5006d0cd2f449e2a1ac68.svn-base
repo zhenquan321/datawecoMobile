@@ -1,0 +1,101 @@
+//路由
+myApp.config(function($stateProvider, $urlRouterProvider) {
+	$stateProvider
+	//home
+		.state('login', {
+			url: "/login",
+			templateUrl: "views/home/login.html",
+
+		})
+		.state('register', {
+			url: "/register",
+			templateUrl: "views/home/register.html",
+
+		})
+		.state('forgetPwd', {
+			url: "/forgetPwd",
+			templateUrl: "views/home/forgetPwd.html",
+
+		})
+
+	//main
+	.state('tabs.UserMag', {
+        url: "/UserMag",
+    	views: {
+    	    'User-tab': {
+    	        templateUrl: "views/UserM/UserMag.html",
+    	    }
+    	}
+    })
+	.state('tabs', {
+			url: "/tab",
+			abstract: true,
+			templateUrl: "views/main.html"
+		})
+		//首页______________________________________________
+		.state('tabs.gains', {
+			url: "/gains",
+			views: {
+				'gains-tab': {
+					templateUrl: "views/gains/gains.html",
+
+				}
+			}
+		})
+	
+		//项目管理____________________________________________
+		.state('tabs.project', {
+			url: "/project",
+			views: {
+				'project-tab': {
+					templateUrl: "views/project/project.html",
+
+				}
+			}
+		})
+		//添加项目
+		.state('addProject', {
+			url: "/addProject",
+			controller: "addProject_ctr",
+			templateUrl: "views/project/addProject.html",
+
+		})
+		
+		//项目细节
+		.state('projectN', {
+			url: "/projectN",
+			controller: "projectN_ctr",
+			templateUrl: "views/project/projectN.html",
+
+		})
+		
+		//报告管理____________________________________________
+		.state('tabs.report', {
+			url: "/report",
+			views: {
+				'report-tab': {
+					templateUrl: "views/report/report.html",
+
+				}
+			}
+		})
+		//添加报告
+		.state('addReport', {
+			url: "/addReport",
+			controller: "addReport_ctr",
+			templateUrl: "views/report/addReport.html",
+
+		})
+		
+		//报告细节
+		.state('reportN', {
+			url: "/reportN",
+			controller: "reportN_ctr",
+			templateUrl: "views/report/reportN.html",
+
+		})
+	
+	
+	
+	$urlRouterProvider.otherwise("/login");
+})

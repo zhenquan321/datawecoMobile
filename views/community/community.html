@@ -1,0 +1,94 @@
+<ion-view view-title="共享社区" ng-controller="community_ctr">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons">
+				<button class="button" ><i class="ion-navicon"></i></button>
+			</div>
+			<h1 class="title">共享社区</h1>
+			<div class="buttons">
+				<button class="button" ui-sref="login"><i class="ion-person"style="font-size: 22px;"></i></button>
+			</div>
+
+		</div>
+	</ion-header-bar>
+	<div class="selectButGroup2">
+		<div class="button-bar">
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==1]" ng-click="ChangeModal(1)">站内数据分享</a>
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==2]" ng-click="ChangeModal(2)">链接分享</a>
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==3]" ng-click="ChangeModal(3)">报告分享</a>
+		</div>
+	</div>
+	<ion-content class="bg  has-header"style="top:80px">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div id="projectCard">
+			<div ng-if="selectModal==1">
+				<div class="mt10">			
+				<ion-list  show-delete="shouldShowDelete"show-reorder="shouldShowReorder"can-swipe="listCanSwipe">
+			        <ion-item  ng-repeat="x in $root.ShareToDiscover_list" item="item" href="" class="item-remove-animate "style="margin-bottom: 10px;padding: 0;">
+			          <div class="report_card" ng-click="clickItem(x._id,x.Name)">
+			          	<a class="del_share_m" title="删除分享" ng-show="x.UserId==$root.userID"><i class="fa fa-trash" ng-click="$root.DelShareToDiscover(x._id,x.ProjectId,x.UserId)"></i></a>
+			          	<div class="RPheader">
+			          		 一个分享来自项目·<span>{{x.ProjectName}}</span>
+			          	</div>
+			          	<div class="shearer">
+			          		<div class="left">
+			          			<div style="float: left;">
+			          				  <img src="Scripts/app/images/uploadpic.jpg" ng-if="!x.PictureSrc" style="">
+		                        <img ng-src="{{x.PictureSrc}}" ng-if="x.PictureSrc" style="">
+			          			</div>
+		                      <div style="float: left;line-height: 32px;padding-left: 12px;">
+		                      	 <span style="" ng-show="!x.Gender">{{x.UserName}}</span>
+		                        <span style="" ng-show="x.Gender">{{x.Gender}}</span>
+		                      </div>
+
+	                   		</div>
+	                   		<div class="right">
+	                   			  —— {{x.CreatedAt|date:'yyyy-MM-dd hh:mm:ss' }}
+	                   		</div>
+			          	</div>
+
+				        <div class="nei">
+			            	<div class="row" style="border: 1px solid #ccc; padding: 0;">
+		                        <div class="col-33" style="padding: 0px;">
+		                            <img src="images/damePic.png" style="width: 100%; border-right: 1px solid #e9eaea;height: 100px;" alt="描述" />
+		                        </div>
+		                        <div class="col-67" style="position: relative; color: #808080;">
+		                            <div style="margin: 10px;">
+		                                <a href="{{x.modelUrl+'?'+x.ProjectId}}" style="cursor:pointer">
+		                                    <h3 style="margin-bottom:5px;color: #099;">{{x.title_a}}</h3>
+		                                </a>
+		                                <p style="height:60px;color:#525252;">{{ x.Content.length>80? ((x.Content | limitTo:80)+"...") : x.Content }}</p>
+		                            </div>
+
+		                        </div>
+		                    </div>
+			          	</div>
+			          </div>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="delProject(x._id)"style="background-color: #e06d53;">
+			            删除
+			          </ion-option-button>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="changeProject(x._id,x.Name,x.Description)"style="background-color: #e8c153;">
+			            修改
+			          </ion-option-button>
+			          <ion-option-button class="button-calm PCButYS" ng-click="shareProject(x._id,x.Name,null)"style="border-bottom: 0px;background-color: #5cd487;">
+			            分享
+			          </ion-option-button>
+			          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(x, $fromIndex, $toIndex)"></ion-reorder-button>
+			        </ion-item>
+			    </ion-list>
+
+			</div>
+		
+			<div ng-if="selectModal==2">
+			
+
+			</div>
+			<div ng-if="selectModal==3">
+			
+			</div>
+		</div>
+		
+
+
+	</ion-content>
+</ion-view>

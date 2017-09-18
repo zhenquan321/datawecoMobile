@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/*bar-color*/
+/*footer-color*/
+/*black-color*/
+.p0 {
+  padding: 0px !important;
+}
+.p20 {
+  padding: 20px !important;
+}
+.pt10b0 {
+  padding: 10px 0px 0px !important;
+}
+.pt10 {
+  padding-top: 10px !important;
+}
+.pl44 {
+  padding-left: 44px !important;
+}
+.pt20 {
+  padding-top: 20px !important;
+}
+.pt5l20 {
+  padding: 5px 20px !important;
+}
+.pt5l10 {
+  padding: 5px 10px !important;
+}
+.plr10 {
+  padding: 0 10px !important;
+}
+.pt20b10 {
+  padding: 20px 0px 10px !important;
+}
+.plr10 {
+  padding: 0 10px !important;
+}
+.plr25 {
+  padding: 0 25px !important;
+}
+.pl20 {
+  padding-left: 20px !important;
+}
+.pl10 {
+  padding-left: 10px !important;
+}
+.mt44 {
+  margin-top: 44px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.m20 {
+  margin: 20px !important;
+}
+.mt10 {
+  margin-top: 10px !important;
+}
+.mt30 {
+  margin-top: 30px !important;
+}
+.mt70 {
+  margin-top: 70px !important;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.position-r0 {
+  position: absolute;
+  right: 0;
+}
+.position-l0 {
+  position: absolute;
+  left: 0;
+}
+.position-b0 {
+  position: absolute;
+  bottom: 0;
+}
+.position-t0 {
+  position: absolute;
+  top: 0;
+}
+.position-l20 {
+  position: absolute;
+  left: 20;
+}
+.main-color-bg {
+  background-color: #009999 !important;
+}
+.main-color {
+  color: #009999 !important;
+}
+.bt1 {
+  border-bottom: 1px solid #dddddd;
+}
+.b0 {
+  border: transparent;
+}
+.bt0 {
+  border-bottom: transparent !important;
+}
+.pt8l15 {
+  padding: 8px 15px ;
+}
+.width100 {
+  width: 100%;
+}
+.relative {
+  position: relative;
+}

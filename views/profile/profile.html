@@ -1,0 +1,73 @@
+  <!--个人信息-->
+
+    <div class="bar bar-header bar-positive">
+    	<a  ui-sref="tabs.PIM">
+ 	        <button class="button button-icon ion-ios-arrow-left"  >
+        </button>
+        </a>
+	<h3 class="title">基本信息</h3>
+
+</div>
+ <ion-view view-title="基本信息" ng-controller="mailbox_ctr">
+	<ion-content class="bg">
+<div id="PIM">
+    <div class="content has-header ionic-pseudo">
+
+      <div class="list profile">
+
+        <a class="item  item-frist" href="#" style="line-height: 40px;">
+                 头像
+          <img src="../src/images/head.png" class="right" width="40" height="40" alt="头像" />
+        </a>
+ <div class="item-divider">         
+        </div>
+
+        <a class="item  "  ui-sref="mailbox">
+        	<div class="border-90">
+          邮箱
+          <span class="mailbox-email right">{{$root.userInfo.email}}</span>
+        </div>
+        </a>
+
+                
+        <a class="item  "  ui-sref="address">
+        	        	<div class="border-100">
+          管理收货地址
+          </div>
+        </a>
+       
+ <div class="item-divider">  
+        </div>
+        <a class="item "   ui-sref="Alipay">
+        	        	<div class="border-90">
+          支付宝
+</div>
+        </a>
+                        
+<a class="item  "   ui-sref="identity">
+        	        	<div class="border-90">
+          身份认证
+        </div>
+        </a>
+
+                        
+       <a class="item  "   ui-sref="PasswordMng">
+        	        	<div class="border-90">
+          资金密码管理
+</div>
+        </a>
+                                
+<a class="item  "   ui-sref="ModifyPwd">
+        	        	<div class="border-100">
+          修改登录密码
+        	        	</div>
+       </a>   
+        </div>
+      </div>
+
+    </div>
+    </div>
+    	</ion-content>
+</ion-view>
+
+   

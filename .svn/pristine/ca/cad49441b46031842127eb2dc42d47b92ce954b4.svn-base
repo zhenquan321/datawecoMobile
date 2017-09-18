@@ -1,0 +1,188 @@
+<ion-view view-title="项目管理" ng-controller="project_ctr">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons">
+				 
+			</div>
+			<h1 class="title">项目管理</h1>
+			<div class="buttons">
+				
+			</div>
+		</div>
+	</ion-header-bar>
+	<div class="selectButGroup">
+		<div class="button-bar">
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==1]" ng-click="ChangeModal(1)">创建</a>
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==2]" ng-click="ChangeModal(2)">接受</a>
+			<a class="button" ng-class="{true:'bgactive',false:''}[selectModal==3]" ng-click="ChangeModal(3)">分享</a>
+		</div>
+	</div>
+	<ion-content class="bg  has-header"style="top:75px">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div id="projectCard">
+			<div ng-show="selectModal==1">
+				<div class="mt10">
+					<div class="section " style="text-align: left;">
+						<div class="list">
+						  <a class="item  item-icon-right"  ui-sref="addProject" style="border: 0px;font-size: 16px;color: #099;padding:12px 15px;">
+						   <span style="display: inline-block;margin-top: 2px;">创建项目</span> 
+						    <i class="icon ion-plus-circled"style="color: #777;"></i>
+						  </a>
+						</div>
+					</div>
+				</div>
+				<div class="mt10">
+				
+			        <ion-item  ng-repeat="x in $root.projectsList" item="item" href="" class="item-remove-animate "style="margin-bottom: 10px;padding: 0;">
+			          <div class="row project_card" ng-click="clickItem(x._id,x.Name)" ui-sref="projectN">
+			          	<div class="col-33 left">
+			          		  <div class="top ">
+                                    <div class="lianJie">
+                                    	<div>
+                                    		<span class="suzi inlinesparkline" id="{{'modal'+$index}}" style="margin-top:25px;">1,4,4,7,5,9,10</span>
+                                    	</div>
+                                        <span class="ms">已搜链接数</span><br />
+                                        <span class="ms_2">{{x.LinkCount}}</span>
+                                    </div>
+                               </div>
+			          	</div>
+			          	<div class="col-67 right">
+			          		<div class="desc" >
+                                <div style="" class="">
+                                    <div class="title "
+                                         title="{{x.Name}}">
+                                        {{ x.Name.length>10? ((x.Name | limitTo:10)+"...") : x.Name }}
+                                    </div>
+                                </div>
+                                <div class="subTitle " >
+                                    创建于：{{x.CreatedAt.toLocaleString()|date:'yyyy-MM-dd ' }}
+                                </div>
+                                <div class="miaoshu_n" title="x.Description">
+                                    <strong>描述：</strong>{{ x.Description.length>28? ((x.Description | limitTo:28)+"...") : x.Description }}
+                                </div>
+                            </div>
+
+			          		
+			          	</div>
+
+			          </div>
+  
+			          <ion-option-button class="button-assertive PCButYS" ng-click="delProject(x._id)"style="background-color: #e06d53;">
+			            删除
+			          </ion-option-button>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="changeProject(x._id,x.Name,x.Description)"style="background-color: #e8c153;">
+			            修改
+			          </ion-option-button>
+			          <ion-option-button class="button-calm PCButYS" ng-click="shareProject(x._id,x.Name,null)"style="border-bottom: 0px;background-color: #5cd487;">
+			            分享
+			          </ion-option-button>
+			          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(x, $fromIndex, $toIndex)"></ion-reorder-button>
+			        </ion-item>
+			
+			    </ion-list>
+				</div>
+
+
+			</div>
+		
+			<div ng-show="selectModal==2">
+			
+					<div class="mt10">
+			        <ion-item ng-repeat="x in ToMeProjects" item="item" href="" class="item-remove-animate "style="margin-bottom: 10px;padding: 0;">
+
+			          <div class="row project_card" ng-click="clickItem(x._id,x.Name)">
+			          	<div class="col-33 left">
+			          		  <div class="top ">
+                                    <div class="lianJie">
+                                    	<div>
+                                    		<span class="suzi inlinesparkline" id="{{'shareMeModal'+$index}}" style="margin-top:25px;">1,4,4,7,5,9,10</span>
+                                    	</div>
+                                        <span class="ms">已搜链接数</span><br />
+                                        <span class="ms_2">{{x.LinkCount}}</span>
+                                    </div>
+                               </div>
+			          	</div>
+			          	<div class="col-67 right">
+			          		<div class="desc" >
+                                <div style="" class="">
+                                    <div class="title "
+                                         title="{{x.Name}}">
+                                        {{ x.Name.length>10? ((x.Name | limitTo:10)+"...") : x.Name }}
+                                    </div>
+                                </div>
+                                <div class="subTitle " >
+                                    创建于：{{x.CreatedAt.toLocaleString()|date:'yyyy-MM-dd ' }}
+                                </div>
+                                <div class="miaoshu_n" title="x.Description">
+                                    <strong>描述：</strong>{{ x.Description.length>28? ((x.Description | limitTo:28)+"...") : x.Description }}
+                                </div>
+                           </div>			          		
+			          	</div>
+			          </div>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="delProject(x._id)"style="background-color: #e06d53;">
+			            删除
+			          </ion-option-button>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="changeProject(x._id,x.Name,x.Description)"style="background-color: #e8c153;">
+			            修改
+			          </ion-option-button>
+			          <ion-option-button class="button-calm PCButYS" ng-click="shareProject(x._id,x.Name,null)"style="border-bottom: 0px;background-color: #5cd487;">
+			            分享
+			          </ion-option-button>
+			          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(x, $fromIndex, $toIndex)"></ion-reorder-button>
+			        </ion-item>
+			    </ion-list>
+			</div>			
+			</div>
+				<div ng-show="selectModal==3">
+				<div class="mt10">
+			        <ion-item ng-repeat="x in ShareProjects" item="item" href="" class="item-remove-animate "style="margin-bottom: 10px;padding: 0;">
+			          <div class="row project_card" ng-click="clickItem(x._id,x.Name)">
+			          	<div class="col-33 left">
+			          		  <div class="top ">
+                                    <div class="lianJie">
+                                    	<div>
+                                    		<span class="suzi inlinesparkline" id="{{'myShareModal'+$index}}" style="margin-top:25px;">1,4,4,7,5,9,10</span>
+                                    	</div>
+                                        <span class="ms">已搜链接数</span><br />
+                                        <span class="ms_2">{{x.LinkCount}}</span>
+                                    </div>
+                               </div>
+			          	</div>
+			          	<div class="col-67 right">
+			          		<div class="desc" >
+                                <div style="" class="">
+                                    <div class="title "
+                                         title="{{x.Name}}">
+                                        {{ x.Name.length>10? ((x.Name | limitTo:10)+"...") : x.Name }}
+                                    </div>
+                                </div>
+                                <div class="subTitle " >
+                                    创建于：{{x.CreatedAt.toLocaleString()|date:'yyyy-MM-dd ' }}
+                                </div>
+                                <div class="miaoshu_n" title="x.Description">
+                                    <strong>描述：</strong>{{ x.Description.length>28? ((x.Description | limitTo:28)+"...") : x.Description }}
+                                </div>
+                           </div>			      
+			          	</div>
+			          </div> 
+			          <ion-option-button class="button-assertive PCButYS" ng-click="delProject(x._id)"style="background-color: #e06d53;">
+			            删除
+			          </ion-option-button>
+			          <ion-option-button class="button-assertive PCButYS" ng-click="changeProject(x._id,x.Name,x.Description)"style="background-color: #e8c153;">
+			            修改
+			          </ion-option-button>
+			          <ion-option-button class="button-calm PCButYS" ng-click="shareProject(x._id,x.Name,null)"style="border-bottom: 0px;background-color: #5cd487;">
+			            分享
+			          </ion-option-button>
+			          <ion-reorder-button class="ion-navicon" on-reorder="moveItem(x, $fromIndex, $toIndex)"></ion-reorder-button>
+			        </ion-item>
+
+			    </ion-list>
+				</div>
+			</div>
+		</div>
+		
+
+
+	</ion-content>
+</ion-view>

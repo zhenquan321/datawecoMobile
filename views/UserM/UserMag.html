@@ -1,0 +1,71 @@
+﻿ <ion-view view-title="个人信息" ng-controller="UserMag_ctr">
+  	<ion-header-bar align-title="center" class="bar-positive">
+		<div class="buttons">
+			<button class="button"  ng-click="toggleLeftSideMenu()"style="font-size: 16px;"ui-sref="seting"><i></i>设置</button>
+		</div>
+		<h1 class="title"></h1>
+		<div class="buttons">
+			<button class="button" ui-sref="massage"><i class="fa fa-commenting-o"style="font-size: 22px;"></i></button>
+		</div>
+	</ion-header-bar>
+    <ion-content class="bg has-header">
+        <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()" style="z-index: 10;"></ion-refresher>
+        <div id="userMag">
+      
+            <div class="title_um">
+				<img ng-src="{{$root.PictureSrc}}" alt="Alternate Text" ng-if="$root.PictureSrc" />
+				<img ng-src="image/AB_B.png" alt="Alternate Text" ng-if="!$root.PictureSrc" />
+                <br />
+				<span ng-if="$root.Gender">{{$root.userInfo.Gender}}</span>
+				<span ng-if="!$root.Gender">{{$root.userInfo.LoginName}}</span>
+            </div>
+            <div class="nei_list">
+                <div class="list">
+
+                    <a class="item item-icon-left item-icon-right" style="border-bottom:0;">
+                        <i class="ion-ios-analytics"></i>
+                        好知币
+                        <span class="item-note">
+                            余额：<span style="color: #52a290">500</span>币
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 200px;" id="projectNow"></div>
+				</div>
+			</div>
+
+			<div class="mt10">
+				<div class="section " style="text-align: left;padding:10px 15px;">
+					<div style="width: 100%;height: 200px;" id="reportNow"></div>
+				</div>
+			</div>
+			
+			<div class="mt10">
+				<div class="section p20" style="text-align: left;padding:10px 15px;color:#777">
+					<div>一个新的评论来自于·<span style="color:#099;font-weight: 600;">社区分享</span></div>
+					<h4 style="margin: 5px 0;"> 成功设计大赛</h4>
+					<div>
+						如果说“创新是公司未来发展的核心驱动力”（杨元庆），那么，“设计”则“是实现企业创新最有价值的战略工具”。（菲利普·科特勒）http://www.bpo.net...
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt10"style="margin-bottom: 10px;">
+					<div class="section p20" style="text-align: left;padding:10px 15px;color:#777">
+					<div>收到新的报告分享·<span style="color:#099;font-weight: 600;">基督徒影视内容</span></div>
+					<div>
+					基督徒福音视频分享网站7GTV的传播，似乎受到一定程度的屏蔽。所能检索到的收录内容量很小
+					</div>
+				</div>
+			</div>
+			
+ 
+        </div>
+    </ion-content>
+</ion-view>
+
+

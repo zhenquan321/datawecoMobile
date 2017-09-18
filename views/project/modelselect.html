@@ -1,0 +1,73 @@
+<ion-view view-title="选择" class="white-bg">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ui-sref="tabs.project"style="font-size: 20px;padding: 7px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<h1 class="title">{{selectedProjectName}}</h1>
+			<div class="buttons">
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="pt10 has-header bg" >
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+
+		<div class="section " style="text-align: center;padding: 15px;height: 100%;">
+			<div class="mt10">
+				<h3 style="color: #099;margin-top: 8px;font-size: 22px;">
+					选择信源
+				</h3> 
+				<p style="color: #777;margin-top: -8px;"> 
+					按需监测，最小的成本获取最大的收获
+				</p>
+			</div>
+
+			<div class="item item-text-wrap " style="padding: 0px; border: 0px; margin-top: 15px;">
+	            <div class="section  " style="border-bottom:0px;">
+	                <div class="row p0 border-b-1-ccc">
+	                	<div class="col Source-Card border-r-1-ccc">
+		                    <div class="text-center p0 " ui-sref="projectN">
+		                    	<span class="title">海量中文数据</span><br />
+		                    	<img src="images/baidu_icon.png" alt="" /><br />	
+		                       	<span class="name">百度</span>
+		                    </div>
+	                    </div>
+	                   	<div class="col Source-Card ">
+		                    <div class="text-center p0 "ui-sref="projectWBn">
+		                    	<span class="title">最新最热的资讯</span><br />
+		                    	<i class="fa fa-weibo"></i><br />	
+		                       	<span class="name">微博</span>
+		                    </div>
+		                   
+	                    </div>
+	                </div>
+	                <div class="row p0 ">
+	                	<div class="col Source-Card border-r-1-ccc">
+		                    <div class="text-center p0 "ui-sref="projectWCn">
+		                    	<span class="title">最火的中文社交圈</span><br />
+		                    	<i class="fa fa-wechat"></i><br />	
+		                       	<span class="name">微信</span>
+		                    </div>
+		                   
+	                    </div>
+	                    	<div class="col Source-Card ">
+		                    <div class="text-center p0 ">
+		                    	<span class="title"style="color:#ccc">正在努力开发中</span><br />
+
+		                    	<i class="fa fa-spinner" style="color:#ccc"></i><br />	
+
+		                       	<span class="name"style="color:#ccc">敬请期待</span>
+		                    </div>
+		                   
+	                    </div>
+	                </div>
+	            </div>
+	        </div> 
+	
+		</div>
+		
+		
+		
+	</ion-content>
+</ion-view>

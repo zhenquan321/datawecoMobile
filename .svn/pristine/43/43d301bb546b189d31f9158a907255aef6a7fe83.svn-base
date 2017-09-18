@@ -1,0 +1,23 @@
+.photoCard{
+   height: 35%; 
+}
+.icon-box{
+    margin: 5px auto 0px;
+    color: #fff;
+    background-color: #009999;
+    border-radius: 27px;
+    width: 54px;
+    height: 54px;
+    padding: 13px 13px;
+    i{
+        font-size: 32px;
+    }
+}
+.section {
+    background-color: #ffffff;
+    border-bottom: 0px solid #e0e0e0!important;
+    
+}
+.pb5{
+    padding-bottom: 5px!imortant;
+}

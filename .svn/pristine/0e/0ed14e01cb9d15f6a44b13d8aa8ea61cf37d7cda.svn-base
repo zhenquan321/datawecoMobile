@@ -1,0 +1,19 @@
+<!--main-->
+
+<ion-tabs class="tabs-icon-bottom tabs-positive">
+	<ion-tab title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="tabs.gains">
+		<ion-nav-view name="gains-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="项目"  icon-on="ion-ios-albums" icon-off="ion-ios-albums-outline" ui-sref="tabs.project" >
+		<ion-nav-view name="project-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="报告"  icon-on="ion-ios-paper" icon-off="ion-ios-paper-outline" ui-sref="tabs.adviertisement" >
+		<ion-nav-view name="adviertisement-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="社区"  icon-on="ion-ios-people" icon-off="ion-ios-people-outline" ui-sref="tabs.invite">
+		<ion-nav-view name="invite-tab"></ion-nav-view>
+	</ion-tab>
+	<ion-tab title="我" icon-on="ion-ios-person" icon-off="ion-ios-person-outline"  ui-sref="tabs.PIM">
+		<ion-nav-view name="PIM-tab"></ion-nav-view>
+	</ion-tab>
+</ion-tabs>

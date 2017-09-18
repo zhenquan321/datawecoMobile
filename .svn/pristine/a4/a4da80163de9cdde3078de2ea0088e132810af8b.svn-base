@@ -1,0 +1,15 @@
+<ion-view view-title="项目管理">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div class="buttons">
+			<i></i>
+		</div>
+		<h1 class="title">项目管理</h1>
+		<div class="buttons">
+			<i></i>
+		</div>
+	</ion-header-bar>
+	<ion-content class="bg  has-header" ng-controller="project_ctr"style="top:0px">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+	
+	</ion-content>
+</ion-view>

@@ -1,0 +1,189 @@
+.photoCard {
+  height: 35%;
+}
+.icon-box {
+  margin: 10px auto 0px;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 27px;
+  width: 40px;
+  height: 40px;
+}
+.icon-box i {
+  font-size: 32px;
+}
+.section {
+  background-color: #ffffff;
+  border-bottom: 0px solid #e0e0e0!important;
+}
+.section .section-item .section-title {
+  padding: 0 0 10px 0!important;
+}
+.pb5 {
+  padding-bottom: 5px!imortant;
+}
+.bg {
+  background-color: #f1f1f1;
+}
+.tabs-positive > .tabs,
+.tabs.tabs-positive {
+  background-color: #fff;
+  border: 0px;
+  border-top: 1px solid #ccc;
+  height: 52px;
+}
+.tab-item .icon {
+  font-size: 28px;
+  height: 28px;
+  margin-top: 4px;
+}
+.selectButGroup {
+  margin-top: 42px;
+  background-color: #099;
+  padding: 2px 15% 10px;
+  position: relative;
+  z-index: 1000;
+}
+.selectButGroup .button {
+  height: 22px;
+  min-height: 22px;
+  padding: 0px 16px;
+  line-height: 21px;
+  border: 1px solid #fff;
+  background-color: #099;
+  color: #fff;
+  font-size: 14px;
+}
+.selectButGroup .bgactive {
+  background-color: #fff;
+  color: #099;
+}
+#projectCard .project_card {
+  position: relative;
+  padding: 0px;
+  height: 120px;
+}
+#projectCard .project_card .left {
+  position: absolute;
+  left: 0;
+}
+#projectCard .project_card .left .top {
+  height: 130px;
+  width: 130px;
+  border-bottom: 1px solid #099;
+  background-color: #fff;
+  padding: 10px;
+}
+#projectCard .project_card .left .top .lianJie {
+  height: 100px;
+  width: 100px;
+  border-radius: 55px;
+  background-color: #f3f3f3;
+  line-height: 15px;
+  border: 1px solid #099;
+  text-align: center;
+}
+#projectCard .project_card .left .top .lianJie .suzi {
+  font-size: 24px;
+  margin-top: 40px;
+  display: inline-block;
+  color: #099;
+}
+#projectCard .project_card .left .top .lianJie .ms {
+  color: #929292;
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 12px;
+}
+#projectCard .project_card .left .top .lianJie .ms_2 {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+}
+#projectCard .project_card .left .bottom {
+  height: 40px;
+  background-color: #e6e6e6;
+  line-height: 42px;
+  color: #777;
+  font-size: 12px;
+}
+#projectCard .project_card .left .bottom i {
+  display: inline-block;
+}
+#projectCard .project_card .right {
+  width: 100%;
+  padding-left: 130px;
+}
+#projectCard .project_card .right .desc {
+  margin-top: 0px!important;
+  color: #777;
+}
+#projectCard .project_card .right .title {
+  line-height: 26px;
+  color: #099;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+#projectCard .project_card .right .top {
+  border-bottom: 1px solid #ccc;
+  height: 130px;
+}
+#projectCard .project_card .right .subTitle {
+  color: #ccc;
+  font-size: 12px;
+}
+#projectCard .PCButYS {
+  display: block;
+  height: 40px;
+  padding: 0px;
+  min-height: 40px;
+  line-height: 40px;
+  width: 90px;
+  background-color: #8c8c8c;
+  border-bottom: 1px solid #fdfdfd;
+}
+#userMag .title_um {
+  height: 250px;
+  width: 100%;
+  background: url(images/bijing.png) no-repeat #ffffff;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  text-align: center;
+  padding: 30px;
+}
+#userMag .title_um img {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  padding: 5px;
+  border: 1px solid #e8e8e8;
+}
+#userMag .title_um span {
+  font-size: 18px;
+  color: #fff;
+}
+#userMag .nei_list {
+  padding: 0 15px ;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0px 1px 2px #dedede;
+}
+#userMag .nei_list .list a {
+  margin: 0px!important;
+  border: 0px;
+  border-bottom: 1px solid #eee;
+  padding: 13px 0px 10px;
+  font-size: 16px;
+  box-shadow: 0 0 0 #fff ;
+}
+#userMag .nei_list .list a i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #68817b;
+}

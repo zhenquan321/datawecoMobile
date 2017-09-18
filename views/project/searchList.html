@@ -1,0 +1,54 @@
+<ion-view view-title="搜索详情" class="white-bg">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div>
+			<div class="buttons" ui-sref="tabs.project"style="font-size: 20px;padding: 7px;">
+				<i class="ion-chevron-left"></i>
+			</div>
+			<h1 class="title">{{selectedProjectName}}</h1>
+			<div class="buttons">
+			</div>
+		</div>
+	</ion-header-bar>
+
+	<ion-content class="pt10 has-header bg" >
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		
+		       <span ng-repeat="z in resultList">
+                    <div class="baidu-cards">
+                        <div class="baidu-cards-title">
+                            <a href={{z.LinkUrl}} target="_blank">
+                                {{z.Title.length>50? ((z.Title | limitTo:50)+"...") : z.Title }}
+                            </a>
+                            <a href="" class="collection">
+                                <i class="fa  fa-share-square-o"></i>&nbsp;
+                                <i ng-click="SetLinkStatus(z._id,'save')" id={{z._id}} class="fa" ng-class="{true: 'fa-star', false: 'fa-star-o'}[z.DataCleanStatus==1]"></i>&nbsp;<i class="fa fa-trash-o" ng-click="SetLinkStatus(z._id,'delete')"></i>
+                            </a>
+                        </div>
+                        <div class="baidu-cards-abstract" data-toggle="tooltip" data-placement="top"
+                             title={{z.Description}}>
+                            <span class="baidu-cards-title-time">
+                                <!--{{z.CreatedAt| date:'yyyy-MM-dd'}} --->
+                                {{z.PublishTime| date:'yyyy-MM-dd'}}
+                            </span>{{z.Description.length>150? ((z.Description | limitTo:150)+"...") : z.Description }}
+                        </div>
+                        <div class="baidu-cards-footer">
+                            <span class="domain">{{z.Domain}}</span>
+                            <span class="domain-v" ng-show="z.BaiduVStar==1"
+                                  style="background-position: -888px -185px;"></span>
+                            <span class="domain-v" ng-show="z.BaiduVStar==2"
+                                  style="background-position: -910px -185px;"></span>
+                            <span class="domain-v" ng-show="z.BaiduVStar==3"
+                                  style="background-position: -932px -185px;"></span>
+
+                            <a ng-show="z.IsMarket" href="" class=""> - 推广</a>
+
+                            <!--<span> - <a href="" class="baidu-cards-title-time">74%-好评</a></span>-->
+                        </div>
+                    </div>
+                </span>
+		
+		
+		
+		
+	</ion-content>
+</ion-view>

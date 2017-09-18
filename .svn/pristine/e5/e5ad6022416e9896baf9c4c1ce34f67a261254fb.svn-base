@@ -1,0 +1,111 @@
+<ion-view view-title="DLCould">
+	<ion-header-bar align-title="center" class="bar-positive">
+		<div class="buttons">
+			<i></i>
+		</div>
+		<h1 class="title">DLCould</h1>
+		<div class="buttons">
+			<i></i>
+		</div>
+	</ion-header-bar>
+	<ion-content class="bg  has-header" ng-controller="gains_ctr">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<div class="section photoCard">
+			<!--<iframe style="width: 100%;height: 100%;" frameborder=0 scrolling=auto src=views/plu_in/sandian_dh/index.html></iframe>-->
+			<ion-slide-box style="height: 100%;">
+				<ion-slide>
+					<div class="box blue">
+						<img src="image/feng_3.png" style="width: 100%;height: 100%;" />
+					</div>
+				</ion-slide>
+				<ion-slide>
+					<div class="box yellow">
+						<img src="image/feng_1.png"style="width: 100%;height: 100%;"  alt="" />
+					</div>
+				</ion-slide>
+				<ion-slide on-slide-changed="slideHasChanged(index)">
+					<div class="box pink">
+						<img src="image/feng_2.png" style="width: 100%;height: 100%;" alt="" />
+					</div>
+				</ion-slide>
+			</ion-slide-box> 
+		</div>
+		<div id="">
+			<div class="section">
+			<div class="row plr10">
+				<div class=" col-20 pt10 pb5 section-item text-center" >
+					<div class="icon-box" style="padding: 12px 11px;background-color: #ee3f02;">
+                        <i class="fa fa-retweet"></i>
+                    </div>
+					<div class="section-title">
+						SEO优化
+					</div>
+				</div>
+				<div class=" col-20  pt10 pb5  section-item text-center" >
+					<div class="icon-box"style="padding: 10pt 8pt;background-color: #ffb816;">
+                        <i class="fa fa-users"></i>
+                    </div>
+					<div class="section-title">
+						商业模式
+					</div>
+				</div>
+				<div  class=" col-20  pt10 pb5  section-item text-center" >
+					<div class="icon-box">
+                        <i class="fa fa-rss-square"></i>
+                    </div>
+					<div class="section-title">
+						影响监测
+					</div>
+				</div>
+				<div class=" col-20  pt10 pb5  section-item text-center"  >
+					<div class="icon-box"style="padding: 13px;background-color: #01cd9e;">
+                        <i class="fa fa-bar-chart"style="font-size:28px;"></i>
+                    </div>
+					<div class="section-title">
+						电商渠道
+					</div>
+				</div>
+				<div class=" col-20  pt10 pb5  section-item text-center">
+					<div class="icon-box"style="padding: 12px;background-color: #009fe8;">
+                        <i class="fa fa-bullseye"></i>
+                    </div>
+					<div class="section-title">
+						深度舆情
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+		<div class="mt10">
+			<div class="section p20"style="text-align: center;">
+				<h4 style="color: #099;font-size: 20px;margin-top: 0;">网络影响力提升解决方案</h4>
+				<p style="text-align: justify;margin-bottom: 0;">
+				为全球正在兴起的影响力投资提供深度舆情监测服务。影响力监测以社会创新与技术创新公司、投资孵化器为服务对象，为他们深入解读和细化分析利益相关各方的对客户、目标市场、产品服务、业务战略的重要看法，以服务于战略管理。
+				</p>			
+			</div>
+		</div>
+		<div class="mt10">
+			<div class="section p20"style="text-align: center;">
+				<h4 style="color: #099;font-size: 20px;margin-top: 0;">企业营销渠道优化解决方案</h4>
+				<p style="text-align: justify;margin-bottom: 0;">
+				为品牌产品在线营销做： 电商平台渠道竞争优势监测、 社交平台品牌提及监测、 搜索引擎导流链接分析、 移动端渠道优劣势评测。根据分析报告发现问题，为客户做出最佳的改进方案，并持续跟进以促进企业发展。
+
+				</p>			
+			</div>
+		</div>
+		<div class="mt10 ">
+			<div class="section p20"style="text-align: center;">
+				<h4 style="color: #099;font-size: 20px;margin-top: 0;">商业模式优化解决方案</h4>
+				<p style="text-align: justify;margin-bottom: 0;">
+				资深市场专家在海量数据，科学化的分析方法以及精湛的科技技术的基础上， 利用商业模式设计工具为创业团队提供商业计划、战略制定、模式设计的咨询服务； 利用执行绩效管理工具比如平衡积分卡为团队运营优化提供咨询服务。
+
+				</p>			
+			</div>
+		</div>
+		<div style="height: 10px;">
+			
+		</div>
+				
+	</ion-content>
+</ion-view>

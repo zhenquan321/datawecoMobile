@@ -1,0 +1,37 @@
+<!--注册-->
+
+<div class="bar bar-header bar-positive">
+	<a href="#/login">
+		<button class="button button-icon ion-ios-arrow-left">
+        </button>
+	</a>
+	<h3 class="title">注 册</h3>
+</div>
+<ion-view view-title="注册" class="bg">
+	<ion-content class="pt10" ng-controller="register_ctr">
+		<div class="content has-header">
+			<div class="list">
+				<label class="item item-input">
+          <span class="input-label" >用&nbsp;&nbsp;户&nbsp;&nbsp;名</span>
+          <input type="text"  placeholder="请输入用户名" ng-model="mobile"   >
+				</label>
+				<label class="item item-input">
+          <span class="input-label" >密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+          <input type="password"  placeholder="请输入密码" ng-model="inputpic_yzm"   >
+        </label>
+				<label class="item item-input">
+          <span class="input-label" >确认密码</span>
+          <input type="password"  placeholder="请示再次输入密码" ng-model="inputMobile_yzm"   >
+        </label>
+				<label class="item item-input">
+          <span class="input-label" >邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span>
+          <input type="email"  placeholder="请输入邮箱"   ng-model="password">
+        </label>
+			</div>
+			<div class="plr10">
+				<button class="button  button-block  btn-red" on-tap="register()">注册</button>
+			</div>
+
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,20 @@
+//收益
+var gains_ctr = myApp.controller('gains_ctr', ['$scope', '$rootScope', '$log', '$timeout', '$http', '$location', 'MyProvider', 'publicFunc', 'ioniclocalStorage', '$ionicLoading', function($scope, $rootScope, $log, $timeout, $http, $location, MyProvider, publicFunc, ioniclocalStorage, $ionicLoading) {
+	//初始化income
+	$rootScope.income = {
+		income_current: 0,
+		currentdayincome: 0,
+		income_total: 0
+	};
+	//获取本地缓存数据
+	$rootScope.userInfo = ioniclocalStorage.getObject("userInfo");
+	
+
+	//下拉刷新
+	$scope.doRefresh = function() {
+
+			$scope.$broadcast('scroll.refreshComplete');
+	};
+	
+	
+}])
